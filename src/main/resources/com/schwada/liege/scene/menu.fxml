@@ -1,0 +1,22 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<GridPane fx:controller="com.schwada.liege.controller.MenuController" xmlns:fx="http://javafx.com/fxml" prefHeight="500.0" prefWidth="1000.0">
+<stylesheets><URL value="@style.css" /></stylesheets>
+
+<VBox spacing="15">
+    <HBox>
+        <Label styleClass="header" text="Main menu" />
+    </HBox>
+    <HBox>
+        <Button fx:id="playButton" text="Login" styleClass="button" onAction="#handlePlay"/>
+    </HBox>
+    <HBox>
+        <Button fx:id="settingsButton" text="Settings" styleClass="button" onAction="#handleSettings"/>
+    </HBox>
+    <HBox>
+        <Button fx:id="quitButton" text="Quit to desktop" styleClass="button" onAction="#handleQuit"/>
+    </HBox>
+</VBox>
+</GridPane>

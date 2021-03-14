@@ -1,0 +1,142 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-background-color: #222222;
+    -fx-alignment: top-left;
+    -fx-padding: 60px 100px 10px;
+    -fx-font-family: "Didact Gothic";
+}
+
+.header {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ccc;
+}
+
+.inputlabel {
+    -fx-text-fill: #999999;
+}
+
+.input {
+    -fx-background-color: #343434;
+    -fx-text-fill: #c4c4c4;
+    -fx-prompt-text-fill: #888888;
+    -fx-max-width: 800px;
+    -fx-min-width: 200px;
+    -fx-pref-width: 800px;
+    -fx-min-height: 40px;
+    -fx-highlight-text-fill: #888888;
+}
+
+.input-small {
+    -fx-pref-width: 150px !important;
+    -fx-min-height: 30px !important;
+}
+
+.input > .label {
+    -fx-background-color: #343434;
+    -fx-text-fill: #c4c4c4;
+    -fx-prompt-text-fill: #888888;
+}
+
+#errorText {
+    -fx-text-fill: red;
+}
+
+.button {
+    -fx-background-color: #343434;
+    -fx-text-fill: #c4c4c4;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 200px;
+    -fx-cursor: hand;
+    -fx-font-weight: 500;
+}
+
+.button:hover{
+    -fx-background-color: #313131;
+}
+
+.button.active {
+    -fx-font-weight: 700;
+}
+
+.color-picker {
+    -fx-pref-height: 40px;
+}
+
+
+.color-picker .label {
+    -fx-padding: 0  10px;
+    -fx-border-insets: 0 10px;
+    -fx-background-insets: 0 10px;
+    -fx-text-fill: #c4c4c4;
+    -fx-prompt-text-fill: #888888;
+}
+
+.color-picker-label {
+    -fx-min-width: 800px;
+    -fx-pref-width: 800px;
+}
+
+.score-header {
+    -fx-text-fill: #c4c4c4;
+}
+
+.score-box {
+    -fx-padding: 10px 0px 25px 3px;
+    -fx-spacing: 2;
+}
+
+.score {
+    -fx-text-fill: #888888;
+}
+
+.score-user {
+    -fx-text-fill: #c4c4c4;
+}
+
+.score-user-you {
+    -fx-font-weight: 700;
+}
+
+.server-title {
+    -fx-text-fill: #c4c4c4;
+    -fx-padding: 25px 0;
+}
+
+.server-location {
+    -fx-padding: 25px 0;
+    -fx-text-fill: #c4c4c4;
+    -fx-font-weight: 700;
+}
+
+.score-place {
+    -fx-text-fill: #c4c4c4;
+}
+
+.server {
+    -fx-min-width: 250px;
+    -fx-pref-width: 250px;
+    -fx-padding: 5px 5px;
+    -fx-border-radius: 3px;
+    -fx-cursor: hand;
+}
+
+.server-selected .server-text{
+     -fx-text-fill: #ddd;
+     -fx-font-weight: 700;
+}
+
+.server:hover {
+    -fx-background-color: #272727;
+    -fx-cursor: hand;
+}
+
+.server-text {
+    -fx-font-size: 11px;
+    -fx-text-fill: #aaaaaa;
+}
+
+.server-text-ip {
+    -fx-font-size: 11px;
+    -fx-padding: 0px 4px;
+    -fx-text-fill: #666;
+}

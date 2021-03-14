@@ -1,0 +1,4 @@
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="scene" fx:controller="com.schwada.liege.controller.GameController" xmlns:fx="http://javafx.com/fxml">
+</Pane>
