@@ -5,6 +5,7 @@ import com.schwada.liege.graphics.WritableImageView;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
 
 /**
@@ -34,7 +35,7 @@ public class WorldMap {
         int[] tiles = new int[MAP_WIDTH * MAP_HEIGHT];
         try {
             // FIXME: get from FileSystemUtils
-            File file = new File(WorldMap.class.getResource(layerName + ".dat").getFile());
+            File file = new File(WorldMap.class.getResource("/" + layerName + ".dat").getFile());
             byte[] fileContent = Files.readAllBytes(file.toPath());
             for (int i = 0; i < tiles.length; i++) {
                 tiles[i] = fileContent[i];
@@ -55,8 +56,8 @@ public class WorldMap {
                     if (y >= MAP_HEIGHT || y <= 0) continue;
                     if (baseLayer[x + y * MAP_WIDTH] != 0) {
                         // FIXME: improve performance
-                        renderer.fillRect(camera.worldToScreenX(x), camera.worldToScreenY(y), (int) camera.getScale(), (int) camera.getScale(), 0xff00ff00, mapBuffer);
-                    }else {
+                        renderer.fillRect(camera.worldToScreenX(x), camera.worldToScreenY(y), (int) camera.getScale(), (int) camera.getScale(), 0xffffffff, mapBuffer);
+                    } else {
                         // FIXME: could potentially just be rendered as one unified rect if data inside does not change
                         renderer.fillRect(camera.worldToScreenX(x), camera.worldToScreenY(y), (int) camera.getScale(), (int) camera.getScale(), 0xff2b4254, mapBuffer);
                     }

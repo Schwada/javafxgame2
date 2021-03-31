@@ -4,11 +4,13 @@
     <groupId>com.schwada</groupId>
     <artifactId>liege</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -33,13 +35,20 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+            <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.3</version>
                 <configuration>
                     <mainClass>com.schwada.liege.Main</mainClass>
-                    <launcher>launch.bat</launcher>
-                    <compress>2</compress>
+                    <launcher>launcher</launcher>
+                    <executable>executable</executable>
+                    <commandlineArgs>true</commandlineArgs>
+                    <compress>0</compress>
                     <jlinkZipName>liege</jlinkZipName>
                     <jlinkImageName>liege</jlinkImageName>
                     <noManPages>true</noManPages>
@@ -47,5 +56,15 @@
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>*.dat</include>
+                    <include>*.fxml</include>
+                    <include>*.css</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 </project>
