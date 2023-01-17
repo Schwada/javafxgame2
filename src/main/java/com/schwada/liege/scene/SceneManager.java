@@ -1,5 +1,6 @@
 package com.schwada.liege.scene;
 
+import com.schwada.liege.Main;
 import com.schwada.liege.logic.AppState;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +12,6 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
-import java.nio.file.FileSystem;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -64,18 +59,9 @@ public class SceneManager {
      */
     public void setScene(SceneType type) {
         logger.info("Scene manager - switching scene to type: " + type +" and loading controller");
-        this.loader = new FXMLLoader();
+        this.loader = new FXMLLoader(SceneManager.class.getResource(type.toString() + ".fxml"));
         this.loader.setControllerFactory(this.getControllerFactory());
         Parent loadedScene;
-
-//        FileSystem fs = FileSystems.getFileSystem(URI.create("jrt:/"));
-//        System.out.println("LOADED: " + getClass().getResource(type.name().toLowerCase() + ".fxml"));
-//        this.loader.setLocation(getClass().getResource(type.name().toLowerCase() + ".fxml"));
-        try {
-            this.loader.setLocation(new URL("jrt:/com.schwada.liege/com/schwada/liege/scene/menu.fxml"));
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
         try {
             loadedScene = this.loader.load();
         } catch (IOException e) {

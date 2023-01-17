@@ -19,6 +19,8 @@ public class Main extends Application {
     private AppState state;
 
     public static void main(String[] args) {
+        System.setProperty("prism.order", "sw");
+        System.setProperty("prism.text", "t2k");
         System.setProperty("java.util.logging.SimpleFormatter.format", "[%1$tT] [%4$s] %5$s%6$s%n");
         logger.info("David Schwam 2021");
         logger.info("Launching application...");

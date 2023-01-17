@@ -10,7 +10,6 @@ import javafx.scene.layout.Pane;
 
 import java.net.URL;
 import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * JavaFX controller for menu scene. Initializes the game
@@ -20,10 +19,6 @@ import java.util.logging.Logger;
  */
 public class GameController implements Initializable {
 
-    private final static Logger logger = Logger.getLogger(GameController.class.getName());
-
-    private final SceneManager manager;
-    private final AppState state;
     private final Input input;
 
     @FXML
@@ -38,8 +33,6 @@ public class GameController implements Initializable {
 
 
     public GameController(SceneManager manager, AppState state) {
-        this.manager = manager;
-        this.state = state;
         this.input = new Input();
     }
 

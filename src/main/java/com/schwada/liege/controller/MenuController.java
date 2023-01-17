@@ -2,7 +2,6 @@ package com.schwada.liege.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 import com.schwada.liege.logic.AppState;
 import com.schwada.liege.scene.SceneManager;
 import com.schwada.liege.scene.SceneType;
@@ -17,16 +16,11 @@ import javafx.fxml.Initializable;
  */
 public class MenuController implements Initializable {
 
-    private final static Logger logger = Logger.getLogger(MenuController.class.getName());
-
     /** Global objects injected into controller **/
     private final SceneManager manager;
-    private final AppState state;
-
 
     public MenuController(SceneManager manager, AppState state) {
         this.manager = manager;
-        this.state = state;
     }
 
 

@@ -11,7 +11,7 @@ public class Camera {
 
     private float offX, offY;
     private float velocity = 500;
-    private final float maxVelocity = 1000;
+    // private final float maxVelocity = 1000;
 
     private boolean updated = true;
     private float lastOffX, lastOffY;

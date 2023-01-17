@@ -9,5 +9,10 @@ package com.schwada.liege.scene;
  */
 public enum SceneType {
     MENU,
-    GAME
+    GAME;
+    
+    @Override
+    public String toString() {
+        return super.toString().toLowerCase();
+    }
 }

@@ -1,5 +1,5 @@
 module com.schwada.liege {
-    requires javafx.controls;
+    requires transitive javafx.controls;
     requires javafx.fxml;
     requires java.logging;
     requires java.desktop;

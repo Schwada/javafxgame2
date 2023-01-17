@@ -5,7 +5,6 @@ import com.schwada.liege.graphics.WritableImageView;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Files;
 
 /**
@@ -35,7 +34,7 @@ public class WorldMap {
         int[] tiles = new int[MAP_WIDTH * MAP_HEIGHT];
         try {
             // FIXME: get from FileSystemUtils
-            File file = new File(WorldMap.class.getResource("/" + layerName + ".dat").getFile());
+            File file = new File(WorldMap.class.getResource(layerName + ".dat").getFile());
             byte[] fileContent = Files.readAllBytes(file.toPath());
             for (int i = 0; i < tiles.length; i++) {
                 tiles[i] = fileContent[i];
